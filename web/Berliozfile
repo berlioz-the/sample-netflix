@@ -1,0 +1,17 @@
+---
+kind: service
+cluster: netflix
+name: web
+
+provides:
+    default:
+        port: 3000
+        protocol: http
+
+consumes:
+    - cluster: account
+      endpoint: api
+
+resources:
+    memory:
+        min: 100
