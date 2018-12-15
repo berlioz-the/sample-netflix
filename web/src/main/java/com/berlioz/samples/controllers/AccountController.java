@@ -16,7 +16,7 @@ public class AccountController {
     @RequestMapping("/account")
     public String handle(ModelMap model) {
 
-        Movie[] movies = restTemplate.getForObject("/list", Movie[].class);
+        Movie[] movies = restTemplate.getForObject("/api/list", Movie[].class);
         model.addAttribute("movies", movies);
 
         return "account";

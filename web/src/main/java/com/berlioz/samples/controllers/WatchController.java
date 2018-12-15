@@ -16,7 +16,7 @@ public class WatchController {
 
     @RequestMapping("/watch")
     public String handle(@RequestParam("id") String id, ModelMap model) {
-        WatchableMovie movie = restTemplate.getForObject("/watch?id={id}", WatchableMovie.class, id);
+        WatchableMovie movie = restTemplate.getForObject("/api/watch?id={id}", WatchableMovie.class, id);
 
         model.addAttribute("movie", movie);
 
