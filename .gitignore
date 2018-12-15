@@ -73,6 +73,9 @@ logs_berlioz/
 
 
 # Java
+*.class
+web/bin/
+web/.project
 **/out/production
 **/maven-status/
 **/maven-archiver/
